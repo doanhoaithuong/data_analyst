@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: monthly_order_and_lifetime_warranty
+    description: the quantity of unit sold, unit timely replacement and percentage replacemetn timely of unit sold
+
+    columns:
+      - name: month
+        description: dimension of month
+      - name: monthly_unit_sold_smoothskin
+        description: measure value of total smoothskin sold for each month
+      - name: total_unit_replacement_lifetime
+        description: measure value of total unit timely replacement lifetime of each month
+      - name: pct_replacement
+        description: measure value of percentage of total unit replacement lifetime of unit smoothskin sold for each month defined by 1.00*total_unit_replacement_lifetime/monthly_unit_sold_smoothskin

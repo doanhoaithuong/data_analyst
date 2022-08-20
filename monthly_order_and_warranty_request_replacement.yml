@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: monthly_order_and_warranty_request_replacement
+    description: the quantity of unit sold, warranty request, replacement and ratio of them for each month
+
+    columns:
+      - name: month
+        description: dimension of month
+      - name: monthly_unit_sold_smoothskin
+        description: measure value of total smoothskin sold monthly
+      - name: total_quantity_request
+        description: measure value of total quantity requested warranty monthly
+      - name: monthly_unit_replacement
+        description: measure value of total quantity replacement monthly
+      - name: request_vs_unit_sold_ratio
+        description: measure value of percentage warranty request of total unit sold for each month defined by 1.00*total_quantity_request/monthly_unit_sold_smoothskin
+      - name: replacement_vs_request_ratio
+        description: measure value of percentage replacement of total warranty request for each month defined by 1.00*monthly_unit_replacement/total_quantity_request
+      - name: replacement_vs_unit_sold_ratio
+        description: measure value of percentage replacement of total unit sold for each month defined by 1.00*monthly_unit_replacement/monthly_unit_sold_smoothskin
